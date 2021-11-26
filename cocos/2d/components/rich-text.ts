@@ -790,7 +790,11 @@ export class RichText extends UIComponent {
                     segment.node._uiProps.uiTransformComp!.setAnchorPoint(0, 0);
                 break;
             }
-
+            
+            if (!style.imageOffset) {
+                segment.imageOffset = style.imageOffset
+            }
+            
             segment.node.layer = this.node.layer;
             this.node.addChild(segment.node);
             this._segments.push(segment);
