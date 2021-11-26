@@ -791,7 +791,7 @@ export class RichText extends UIComponent {
                 break;
             }
             
-            if (!style.imageOffset) {
+            if (style.imageOffset) {
                 segment.imageOffset = style.imageOffset
             }
             
